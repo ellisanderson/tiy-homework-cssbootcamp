@@ -1,0 +1,89 @@
+@import "partials/variables";
+@import "partials/mixins";
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, img{
+  padding: 0;
+  margin: 0;
+}
+
+
+a.button{
+  @include primary-button;
+}
+
+a.button:hover{
+  background-color: $button-hover-color;
+}
+
+// ••••••••••••••••••••HEADER•••••••••••••••••••••
+header{
+  background-color: $primary-color;
+  padding: 20px 0;
+
+  .container{
+    max-width: 1170px;
+    margin:0 auto;
+    padding:0 20px;
+
+    .first-nav{
+      float: left;
+      display: flex;
+      align-items: center;
+
+      img{
+        height:65px;
+        margin-right: 20px;
+        transition: all .2s ease-in-out;
+      }
+
+      img:hover{
+        transform: scale(1.05);
+      }
+
+      li{
+        @include horizontal-menu;
+
+        a{
+          color: white;
+          text-decoration: none;
+          padding-bottom: 5px;
+          transition: color .2s ease-in-out;
+        }
+
+        a:hover{
+          border-bottom: $secondary-color solid 2px;
+          color: $link-hover-color;
+        }
+      }
+    }
+
+    .second-nav{
+      float: right;
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+
+      li{
+        @include horizontal-menu;
+
+        a{
+          color:white;
+          opacity: .4;
+          text-decoration: none;
+          font-size: .8rem;
+        }
+
+        a:hover{
+          text-decoration: underline;
+        }
+      }
+
+    }
+  }
+
+  .container::after{
+    content:"";
+    display:block;
+    clear:both;
+  }
+}

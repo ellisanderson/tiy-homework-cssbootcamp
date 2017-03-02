@@ -1,0 +1,21 @@
+@mixin flexbox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin primary-button {
+  display: inline-block;
+  background-color: $secondary-color;
+  padding:15px;
+  border-radius: 3px;
+  color: white;
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+}
+
+@mixin horizontal-menu {
+  float:left;
+  list-style-type: none;
+  padding-right: 20px;
+}
