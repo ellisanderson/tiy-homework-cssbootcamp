@@ -294,3 +294,52 @@ header{
 
   }
 }
+
+
+// ••••••••••••••••••••STUDENTS•••••••••••••••••••••
+.students{
+  padding: 4rem 0;
+
+  .container{
+
+    .quote{
+      @include four;
+      color: $h-color;
+
+      h3{
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+      }
+
+      h2{
+        font-size: 1.8rem;
+        font-style: italic;
+        line-height: 2.5rem;
+        margin-bottom: 30px;
+      }
+
+      .button{
+        display: flex;
+        align-items: center;
+        width: 180px;
+        font-size: 1.1rem;
+        margin-top: 20px;
+        border-bottom: 2px solid $button-hover-color;
+      }
+    }
+
+    .stories{
+      @include six;
+
+      .profile-one{
+        @include six;
+      }
+
+      .profile-two{
+        @include six;
+      }
+
+    }
+  }
+}
