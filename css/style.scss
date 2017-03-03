@@ -1,18 +1,40 @@
 @import "partials/variables";
 @import "partials/mixins";
 
+body{
+  font-family: 'PT Sans', sans-serif;
+  font-size: 1.05rem;
+}
+
 h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, img{
   padding: 0;
   margin: 0;
 }
 
+h1, h2 {
+  font-family: 'PT Serif', serif;
+  letter-spacing: .1rem;
+}
 
-a.button{
+
+.container{
+  @include container-style;
+}
+
+.button{
   @include primary-button;
 }
 
-a.button:hover{
+.button:hover{
   background-color: $button-hover-color;
+}
+
+.left{
+  float: left;
+}
+
+.right{
+  float: right;
 }
 
 // ••••••••••••••••••••HEADER•••••••••••••••••••••
@@ -21,9 +43,6 @@ header{
   padding: 20px 0;
 
   .container{
-    max-width: 1170px;
-    margin:0 auto;
-    padding:0 20px;
 
     .first-nav{
       float: left;
@@ -48,6 +67,7 @@ header{
           text-decoration: none;
           padding-bottom: 5px;
           transition: color .2s ease-in-out;
+          font-size: 1.05rem;
         }
 
         a:hover{
@@ -59,7 +79,7 @@ header{
 
     .second-nav{
       float: right;
-      margin-top: 10px;
+      margin-top: 15px;
       display: flex;
       align-items: center;
 
@@ -78,6 +98,7 @@ header{
         }
       }
 
+
     }
   }
 
@@ -86,4 +107,95 @@ header{
     display:block;
     clear:both;
   }
+}
+
+
+
+// ••••••••••••••••••••HERO•••••••••••••••••••••
+.hero{
+  background-image: url(../images/hero/hero.jpg);
+  background-size:cover;
+  min-height:600px;
+
+    .container{
+      padding-top: 156px;
+
+        h1{
+          color: white;
+          font-size: 4rem;
+          margin-top: 50px;
+        }
+
+        h2{
+          margin-top: 10px;
+          color:white;
+        }
+
+        .button{
+        display: flex;
+        align-items: center;
+        width: 180px;
+        font-size: 1.1rem;
+        margin-top: 20px;
+      }
+    }
+}
+
+
+
+// ••••••••••••••••••••PRESS•••••••••••••••••••••
+
+.press{
+  background-color: $form-background-color;
+
+  .container{
+    text-align: center;
+    border-bottom: 1px solid $grey-border-color;
+      img{
+        width:13%;
+      }
+  }
+}
+
+
+
+// ••••••••••••••••••••INFO•••••••••••••••••••••
+
+.info{
+  padding:4rem 0;
+  line-height: 1.6rem;
+
+  .container{
+    overflow: hidden;
+
+      .eight{
+        @include eight;
+
+        h3{
+          color: $primary-color;
+          font-size: 1.5rem;
+          font-style: italic;
+          color: $h-color;
+          margin-bottom: 20px;
+        }
+
+        p{
+          margin-bottom: 40px;
+        }
+      }
+
+      .four{
+        @include four;
+        background: $form-background-color;
+        border-bottom: 2px solid $grey-border-color;
+        padding:20px;
+        border-radius: 10px;
+
+        h4{
+          font-size: .9rem;
+          font-weight: 700;
+        }
+      }
+  }
+
 }

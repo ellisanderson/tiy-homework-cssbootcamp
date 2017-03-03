@@ -7,15 +7,67 @@
 @mixin primary-button {
   display: inline-block;
   background-color: $secondary-color;
-  padding:15px;
-  border-radius: 3px;
+  padding:0.625rem 0.9375rem;
+  border-radius: 4px;
   color: white;
   text-decoration: none;
   transition: all .2s ease-in-out;
+  border: none;
+  font-size: .9rem;
 }
 
 @mixin horizontal-menu {
   float:left;
   list-style-type: none;
-  padding-right: 20px;
+  padding-right: 25px;
+}
+
+@mixin container-style {
+  max-width: 1200px;
+  margin:0 auto;
+  padding:0 20px;
+}
+
+// ••••••••••••••••GRID DIVISIONS••••••••••••••••••
+
+@mixin twelve {
+  width:100%;
+  display: inline-block;
+  padding-right:50px;
+  box-sizing: border-box;
+}
+
+@mixin ten {
+  width:83.333%;
+  display: inline-block;
+  padding-right:50px;
+  box-sizing: border-box;
+}
+
+@mixin eight {
+  width:66.666%;
+  display: inline-block;
+  padding-right:50px;
+  box-sizing: border-box;
+}
+
+@mixin six {
+  width:50%;
+  display: inline-block;
+  padding-right:50px;
+  box-sizing: border-box;
+}
+
+@mixin four {
+  width:33.333%;
+  display: inline-block;
+  padding-right:50px;
+  box-sizing: border-box;
+}
+
+@mixin two {
+  width:16.666%;
+  display: inline-block;
+  padding-right:50px;
+  box-sizing: border-box;
 }
