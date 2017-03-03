@@ -71,3 +71,46 @@
   padding-right:50px;
   box-sizing: border-box;
 }
+
+
+// •••••••••••••••••••FORM••••••••••••••••••••
+@mixin form {
+
+  margin-top: 15px;
+
+  input{
+    font-family: serif;
+    font-style: italic;
+    font-weight: lighter;
+    margin-bottom: 10px;
+  }
+
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-weight: 100;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    font-weight: 100;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    font-weight: 100;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    font-weight: 100;
+  }
+
+  input:focus{
+    outline: none;
+  }
+
+  .half-width{
+    width: 48%;
+    box-sizing: border-box;
+    padding: 10px 5px;
+  }
+
+  .full-width{
+    width:100%;
+    box-sizing: border-box;
+    padding: 10px 5px;
+  }
+}

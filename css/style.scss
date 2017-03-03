@@ -173,6 +173,7 @@ header{
 
         h3{
           color: $primary-color;
+          font-family: 'PT serif', serif;
           font-size: 1.5rem;
           font-style: italic;
           color: $h-color;
@@ -188,12 +189,29 @@ header{
         @include four;
         background: $form-background-color;
         border-bottom: 2px solid $grey-border-color;
-        padding:20px;
+        padding:25px;
         border-radius: 10px;
 
         h4{
           font-size: .9rem;
           font-weight: 700;
+        }
+
+        p{
+          font-size: .9rem;
+          line-height: 2rem;
+        }
+
+        form{
+          @include form;
+        }
+
+        .button{
+          width: 100%;
+          box-sizing: border-box;
+          text-align: center;
+          border-bottom: 2px solid $button-hover-color;
+          font-size: 1.1rem;
         }
       }
   }

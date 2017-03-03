@@ -122,6 +122,7 @@ header {
       box-sizing: border-box; }
       .info .container .eight h3 {
         color: #39474E;
+        font-family: 'PT serif', serif;
         font-size: 1.5rem;
         font-style: italic;
         color: #727D84;
@@ -135,10 +136,48 @@ header {
       box-sizing: border-box;
       background: #EBEBEB;
       border-bottom: 2px solid #D5D5D5;
-      padding: 20px;
+      padding: 25px;
       border-radius: 10px; }
       .info .container .four h4 {
         font-size: .9rem;
         font-weight: 700; }
+      .info .container .four p {
+        font-size: .9rem;
+        line-height: 2rem; }
+      .info .container .four form {
+        margin-top: 15px; }
+        .info .container .four form input {
+          font-family: serif;
+          font-style: italic;
+          font-weight: lighter;
+          margin-bottom: 10px; }
+        .info .container .four form ::-webkit-input-placeholder {
+          /* Chrome/Opera/Safari */
+          font-weight: 100; }
+        .info .container .four form ::-moz-placeholder {
+          /* Firefox 19+ */
+          font-weight: 100; }
+        .info .container .four form :-ms-input-placeholder {
+          /* IE 10+ */
+          font-weight: 100; }
+        .info .container .four form :-moz-placeholder {
+          /* Firefox 18- */
+          font-weight: 100; }
+        .info .container .four form input:focus {
+          outline: none; }
+        .info .container .four form .half-width {
+          width: 48%;
+          box-sizing: border-box;
+          padding: 10px 5px; }
+        .info .container .four form .full-width {
+          width: 100%;
+          box-sizing: border-box;
+          padding: 10px 5px; }
+      .info .container .four .button {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        border-bottom: 2px solid #4FA8A3;
+        font-size: 1.1rem; }
 
 /*# sourceMappingURL=style.css.map */
