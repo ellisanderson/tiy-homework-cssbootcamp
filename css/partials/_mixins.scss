@@ -23,7 +23,7 @@
 }
 
 @mixin container-style {
-  max-width: 1200px;
+  max-width: 1100px;
   margin:0 auto;
   padding:0 20px;
 }
@@ -32,43 +32,50 @@
 
 @mixin twelve {
   width:100%;
-  display: inline-block;
-  padding-right:50px;
+  // display: inline-block;
+  padding:0 25px;
   box-sizing: border-box;
 }
 
 @mixin ten {
   width:83.333%;
-  display: inline-block;
-  padding-right:50px;
+  // display: inline-block;
+  // padding:0 25px;
   box-sizing: border-box;
 }
 
 @mixin eight {
   width:66.666%;
-  display: inline-block;
-  padding-right:50px;
+  // display: inline-block;
+  // padding:0 25px;
   box-sizing: border-box;
 }
 
 @mixin six {
   width:50%;
-  display: inline-block;
-  padding-right:50px;
+  // display: inline-block;
+  // padding:0 25px;
   box-sizing: border-box;
 }
 
 @mixin four {
   width:33.333%;
-  display: inline-block;
-  padding-right:50px;
+  // display: inline-block;
+  // padding:0 25px;
+  box-sizing: border-box;
+}
+
+@mixin three {
+  width:25%;
+  // display: inline-block;
+  // padding:0 25px;
   box-sizing: border-box;
 }
 
 @mixin two {
   width:16.666%;
-  display: inline-block;
-  padding-right:50px;
+  // display: inline-block;
+  // padding:0 25px;
   box-sizing: border-box;
 }
 

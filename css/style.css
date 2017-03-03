@@ -6,12 +6,11 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, img {
   padding: 0;
   margin: 0; }
 
-h1, h2 {
-  font-family: 'PT Serif', serif;
-  letter-spacing: .1rem; }
+h1, h2, h3 {
+  font-family: 'PT Serif', serif; }
 
 .container {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 20px; }
 
@@ -117,9 +116,8 @@ header {
     overflow: hidden; }
     .info .container .eight {
       width: 66.666%;
-      display: inline-block;
-      padding-right: 50px;
-      box-sizing: border-box; }
+      box-sizing: border-box;
+      padding-right: 40px; }
       .info .container .eight h3 {
         color: #39474E;
         font-family: 'PT serif', serif;
@@ -131,8 +129,6 @@ header {
         margin-bottom: 40px; }
     .info .container .four {
       width: 33.333%;
-      display: inline-block;
-      padding-right: 50px;
       box-sizing: border-box;
       background: #EBEBEB;
       border-bottom: 2px solid #D5D5D5;
@@ -179,5 +175,48 @@ header {
         text-align: center;
         border-bottom: 2px solid #4FA8A3;
         font-size: 1.1rem; }
+
+.discover {
+  padding: 4rem 0;
+  background-color: #EBEBEB;
+  border-bottom: 1px solid #D5D5D5; }
+  .discover .container {
+    width: 50%;
+    box-sizing: border-box;
+    min-width: 720px;
+    text-align: center;
+    margin: auto;
+    overflow: hidden; }
+    .discover .container h2 {
+      font-size: 2rem;
+      color: #727D84;
+      font-style: italic;
+      margin-bottom: 20px; }
+    .discover .container p {
+      line-height: 1.5rem;
+      color: #39474E; }
+    .discover .container .course {
+      width: 25%;
+      box-sizing: border-box;
+      margin-top: 50px; }
+      .discover .container .course a {
+        text-decoration: none;
+        text-align: center; }
+        .discover .container .course a img {
+          height: 100%;
+          margin-bottom: 20px; }
+      .discover .container .course p {
+        font-size: 1.1rem;
+        font-family: 'PT serif', serif;
+        text-transform: uppercase;
+        letter-spacing: .1rem; }
+      .discover .container .course .front-end {
+        color: #ce832d; }
+      .discover .container .course .back-end {
+        color: #b8584c; }
+      .discover .container .course .mobile {
+        color: #d3b42b; }
+      .discover .container .course .design {
+        color: #35a0ad; }
 
 /*# sourceMappingURL=style.css.map */

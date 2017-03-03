@@ -11,9 +11,8 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, img{
   margin: 0;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: 'PT Serif', serif;
-  letter-spacing: .1rem;
 }
 
 
@@ -170,6 +169,7 @@ header{
 
       .eight{
         @include eight;
+        padding-right: 40px;
 
         h3{
           color: $primary-color;
@@ -216,4 +216,81 @@ header{
       }
   }
 
+}
+
+
+
+// ••••••••••••••••••••DISCOVER•••••••••••••••••••••
+
+.discover{
+
+  padding: 4rem 0;
+  background-color: $form-background-color;
+  border-bottom: 1px solid $grey-border-color;
+
+  .container{
+
+    @include six;
+    min-width: 720px;
+    text-align: center;
+    margin: auto;
+    overflow: hidden;
+
+    h2{
+      font-size: 2rem;
+      color: $h-color;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    p{
+      line-height: 1.5rem;
+      color: $primary-color;
+    }
+
+    .course{
+
+      @include three;
+      // max-width: 120px;
+      margin-top: 50px;
+
+      a{
+
+        text-decoration: none;
+        text-align: center;
+
+        img{
+          height: 100%;
+          margin-bottom: 20px;
+        }
+
+      }
+
+
+      p{
+        font-size: 1.1rem;
+        font-family: 'PT serif', serif;
+        text-transform: uppercase;
+        letter-spacing: .1rem;
+      }
+
+      .front-end{
+        color:$front-end-color;
+      }
+
+      .back-end{
+        color: $back-end-color;
+      }
+
+      .mobile{
+        color:$mobile-color;
+      }
+
+      .design{
+        color:$ui-design-color;
+      }
+
+    }
+
+  }
 }
