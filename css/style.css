@@ -9,10 +9,15 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li, a, img {
 h1, h2, h3 {
   font-family: 'PT Serif', serif; }
 
+p {
+  line-height: 1.5rem;
+  letter-spacing: .01rem; }
+
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 20px; }
+  padding: 0 20px;
+  box-sizing: border-box; }
 
 .button {
   display: inline-block;
@@ -84,6 +89,7 @@ header {
 .hero {
   background-image: url(../images/hero/hero.jpg);
   background-size: cover;
+  background-position: center;
   min-height: 600px; }
   .hero .container {
     padding-top: 156px; }
@@ -98,6 +104,7 @@ header {
       display: flex;
       align-items: center;
       width: 180px;
+      height: 30px;
       font-size: 1.1rem;
       margin-top: 20px; }
 
@@ -127,49 +134,50 @@ header {
         margin-bottom: 20px; }
       .info .container .eight p {
         margin-bottom: 40px; }
-    .info .container .four {
+    .info .container .form {
       width: 33.333%;
       box-sizing: border-box;
       background: #EBEBEB;
       border-bottom: 2px solid #D5D5D5;
       padding: 25px;
-      border-radius: 10px; }
-      .info .container .four h4 {
+      border-radius: 10px;
+      color: #39474E; }
+      .info .container .form h4 {
         font-size: .9rem;
-        font-weight: 700; }
-      .info .container .four p {
-        font-size: .9rem;
-        line-height: 2rem; }
-      .info .container .four form {
+        font-weight: 700;
+        margin-bottom: 10px; }
+      .info .container .form p {
+        font-size: .9rem; }
+      .info .container .form form {
         margin-top: 15px; }
-        .info .container .four form input {
+        .info .container .form form input {
           font-family: serif;
           font-style: italic;
           font-weight: lighter;
           margin-bottom: 10px; }
-        .info .container .four form ::-webkit-input-placeholder {
+        .info .container .form form ::-webkit-input-placeholder {
           /* Chrome/Opera/Safari */
           font-weight: 100; }
-        .info .container .four form ::-moz-placeholder {
+        .info .container .form form ::-moz-placeholder {
           /* Firefox 19+ */
           font-weight: 100; }
-        .info .container .four form :-ms-input-placeholder {
+        .info .container .form form :-ms-input-placeholder {
           /* IE 10+ */
           font-weight: 100; }
-        .info .container .four form :-moz-placeholder {
+        .info .container .form form :-moz-placeholder {
           /* Firefox 18- */
           font-weight: 100; }
-        .info .container .four form input:focus {
+        .info .container .form form input:focus {
           outline: none; }
-        .info .container .four form .half-width {
+        .info .container .form form .half-width {
           width: 48%;
           box-sizing: border-box;
           padding: 10px 5px; }
-        .info .container .four form .full-width {
+        .info .container .form form .full-width {
           width: 100%;
           box-sizing: border-box;
           padding: 10px 5px; }
-      .info .container .four .button {
+      .info .container .form .button {
         width: 100%;
         box-sizing: border-box;
         text-align: center;
@@ -180,43 +188,48 @@ header {
   padding: 4rem 0;
   background-color: #EBEBEB;
   border-bottom: 1px solid #D5D5D5; }
-  .discover .container {
-    width: 50%;
+  .discover .container .discover-details {
+    width: 66.666%;
     box-sizing: border-box;
-    min-width: 720px;
-    text-align: center;
     margin: auto;
-    overflow: hidden; }
-    .discover .container h2 {
+    text-align: center; }
+    .discover .container .discover-details h2 {
       font-size: 2rem;
       color: #727D84;
       font-style: italic;
       margin-bottom: 20px; }
-    .discover .container p {
+    .discover .container .discover-details p {
       line-height: 1.5rem;
       color: #39474E; }
-    .discover .container .course {
+  .discover .container .course-row {
+    width: 83.333%;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: auto; }
+    .discover .container .course-row .course {
       width: 25%;
       box-sizing: border-box;
-      margin-top: 50px; }
-      .discover .container .course a {
+      margin-top: 50px;
+      text-align: center;
+      padding: 0 30px; }
+      .discover .container .course-row .course a {
         text-decoration: none;
         text-align: center; }
-        .discover .container .course a img {
+        .discover .container .course-row .course a img {
           height: 100%;
           margin-bottom: 20px; }
-      .discover .container .course p {
+      .discover .container .course-row .course p {
         font-size: 1.1rem;
         font-family: 'PT serif', serif;
         text-transform: uppercase;
         letter-spacing: .1rem; }
-      .discover .container .course .front-end {
+      .discover .container .course-row .course .front-end {
         color: #ce832d; }
-      .discover .container .course .back-end {
+      .discover .container .course-row .course .back-end {
         color: #b8584c; }
-      .discover .container .course .mobile {
+      .discover .container .course-row .course .mobile {
         color: #d3b42b; }
-      .discover .container .course .design {
+      .discover .container .course-row .course .design {
         color: #35a0ad; }
 
 .students {
@@ -255,7 +268,7 @@ header {
       .students .container .stories .profile {
         width: 50%;
         box-sizing: border-box;
-        padding: 0 10px; }
+        padding: 0 15px; }
         .students .container .stories .profile p {
           text-align: left;
           font-style: italic;
@@ -275,5 +288,86 @@ header {
           color: #727D84;
           font-size: 1.3rem;
           margin-top: 10px; }
+
+.employers {
+  background-image: url(../images/employers/employers-image.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 0; }
+  .employers .container {
+    text-align: center; }
+    .employers .container .employers-details {
+      width: 66.666%;
+      box-sizing: border-box;
+      text-align: center;
+      color: white;
+      margin: auto;
+      margin-bottom: 4rem; }
+      .employers .container .employers-details h2 {
+        margin-bottom: 20px;
+        font-size: 2rem;
+        font-style: italic; }
+    .employers .container .employer-logo {
+      width: 33%;
+      display: inline-block;
+      text-align: center; }
+      .employers .container .employer-logo img {
+        width: 50%; }
+    .employers .container .button {
+      margin-top: 4rem;
+      font-size: 1.1rem;
+      width: 400px;
+      border-bottom: 2px solid #4FA8A3; }
+
+.questions .container {
+  padding: 4rem 0;
+  overflow: hidden; }
+  .questions .container .talk {
+    width: 50%;
+    box-sizing: border-box;
+    padding-right: 40px; }
+  .questions .container .form {
+    width: 24%;
+    box-sizing: border-box;
+    background: #EBEBEB;
+    border-bottom: 2px solid #D5D5D5;
+    padding: 25px;
+    border-radius: 10px;
+    color: #39474E; }
+    .questions .container .form h4 {
+      font-size: .9rem;
+      font-weight: 700;
+      margin-bottom: 10px; }
+    .questions .container .form p {
+      font-size: .9rem; }
+    .questions .container .form form {
+      margin-top: 15px; }
+      .questions .container .form form input {
+        font-family: serif;
+        font-style: italic;
+        font-weight: lighter;
+        margin-bottom: 10px; }
+      .questions .container .form form ::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        font-weight: 100; }
+      .questions .container .form form ::-moz-placeholder {
+        /* Firefox 19+ */
+        font-weight: 100; }
+      .questions .container .form form :-ms-input-placeholder {
+        /* IE 10+ */
+        font-weight: 100; }
+      .questions .container .form form :-moz-placeholder {
+        /* Firefox 18- */
+        font-weight: 100; }
+      .questions .container .form form input:focus {
+        outline: none; }
+      .questions .container .form form .half-width {
+        width: 48%;
+        box-sizing: border-box;
+        padding: 10px 5px; }
+      .questions .container .form form .full-width {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px 5px; }
 
 /*# sourceMappingURL=style.css.map */

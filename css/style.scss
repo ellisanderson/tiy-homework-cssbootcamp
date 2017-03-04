@@ -15,6 +15,10 @@ h1, h2, h3 {
   font-family: 'PT Serif', serif;
 }
 
+p{
+  line-height: 1.5rem;
+  letter-spacing: .01rem;
+}
 
 .container{
   @include container-style;
@@ -114,6 +118,7 @@ header{
 .hero{
   background-image: url(../images/hero/hero.jpg);
   background-size:cover;
+  background-position: center;
   min-height:600px;
 
     .container{
@@ -134,6 +139,7 @@ header{
         display: flex;
         align-items: center;
         width: 180px;
+        height: 30px;
         font-size: 1.1rem;
         margin-top: 20px;
       }
@@ -185,26 +191,9 @@ header{
         }
       }
 
-      .four{
+      .form{
         @include four;
-        background: $form-background-color;
-        border-bottom: 2px solid $grey-border-color;
-        padding:25px;
-        border-radius: 10px;
-
-        h4{
-          font-size: .9rem;
-          font-weight: 700;
-        }
-
-        p{
-          font-size: .9rem;
-          line-height: 2rem;
-        }
-
-        form{
-          @include form;
-        }
+        @include form-box;
 
         .button{
           width: 100%;
@@ -223,73 +212,78 @@ header{
 // ••••••••••••••••••••DISCOVER•••••••••••••••••••••
 
 .discover{
-
   padding: 4rem 0;
   background-color: $form-background-color;
   border-bottom: 1px solid $grey-border-color;
 
   .container{
 
-    @include six;
-    min-width: 720px;
-    text-align: center;
-    margin: auto;
-    overflow: hidden;
+    .discover-details{
+      @include eight;
+      margin: auto;
+      text-align: center;
 
-    h2{
-      font-size: 2rem;
-      color: $h-color;
-      font-style: italic;
-      margin-bottom: 20px;
+      h2{
+        font-size: 2rem;
+        color: $h-color;
+        font-style: italic;
+        margin-bottom: 20px;
+      }
+
+      p{
+        line-height: 1.5rem;
+        color: $primary-color;
+      }
     }
 
-    p{
-      line-height: 1.5rem;
-      color: $primary-color;
-    }
+    .course-row{
+      @include ten;
+      overflow: hidden;
+      margin:auto;
 
-    .course{
-
-      @include three;
-      // max-width: 120px;
-      margin-top: 50px;
-
-      a{
-
-        text-decoration: none;
+      .course{
+        @include three;
+        margin-top: 50px;
         text-align: center;
+        padding: 0 30px;
 
-        img{
-          height: 100%;
-          margin-bottom: 20px;
+        a{
+
+          text-decoration: none;
+          text-align: center;
+
+          img{
+            height: 100%;
+            margin-bottom: 20px;
+          }
+
+        }
+
+
+        p{
+          font-size: 1.1rem;
+          font-family: 'PT serif', serif;
+          text-transform: uppercase;
+          letter-spacing: .1rem;
+        }
+
+        .front-end{
+          color:$front-end-color;
+        }
+
+        .back-end{
+          color: $back-end-color;
+        }
+
+        .mobile{
+          color:$mobile-color;
+        }
+
+        .design{
+          color:$ui-design-color;
         }
 
       }
-
-
-      p{
-        font-size: 1.1rem;
-        font-family: 'PT serif', serif;
-        text-transform: uppercase;
-        letter-spacing: .1rem;
-      }
-
-      .front-end{
-        color:$front-end-color;
-      }
-
-      .back-end{
-        color: $back-end-color;
-      }
-
-      .mobile{
-        color:$mobile-color;
-      }
-
-      .design{
-        color:$ui-design-color;
-      }
-
     }
 
   }
@@ -344,7 +338,7 @@ header{
 
       .profile{
         @include six;
-        padding: 0 10px;
+        padding: 0 15px;
 
         p{
           @include profile-paragraph;
@@ -369,6 +363,72 @@ header{
       }
 
 
+    }
+  }
+}
+
+
+
+// ••••••••••••••••••••EMPLOYERS•••••••••••••••••••••
+.employers{
+  background-image: url(../images/employers/employers-image.jpg);
+  background-size:cover;
+  background-position: center;
+  padding: 4rem 0;
+
+  .container{
+    text-align: center;
+
+    .employers-details{
+      @include eight;
+      text-align: center;
+      color: white;
+      margin: auto;
+      margin-bottom: 4rem;
+
+      h2{
+        margin-bottom: 20px;
+        font-size: 2rem;
+        font-style: italic;
+      }
+    }
+
+    .employer-logo{
+      width: 33%;
+      display: inline-block;
+      text-align: center;
+
+      img{
+        width:50%;
+      }
+    }
+
+    .button{
+      margin-top: 4rem;
+      font-size: 1.1rem;
+      width: 400px;
+      border-bottom: 2px solid $button-hover-color;
+    }
+  }
+}
+
+
+
+// ••••••••••••••••••••QUESTIONS•••••••••••••••••••••
+.questions{
+  .container{
+    padding: 4rem 0;
+    overflow: hidden;
+
+    .talk{
+      @include six;
+      padding-right: 40px;
+    }
+
+    .form{
+      width: 24%;
+      box-sizing: border-box;
+      @include form-box;
     }
   }
 }

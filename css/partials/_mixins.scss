@@ -7,7 +7,6 @@
 @mixin primary-button {
   display: inline-block;
   background-color: $secondary-color;
-  // padding:0.625rem 0.9375rem;
   padding: 15px 20px;
   border-radius: 4px;
   color: white;
@@ -27,6 +26,7 @@
   max-width: 1100px;
   margin:0 auto;
   padding:0 20px;
+  box-sizing: border-box;
 }
 
 @mixin profile-paragraph {
@@ -137,5 +137,27 @@
     width:100%;
     box-sizing: border-box;
     padding: 10px 5px;
+  }
+}
+
+@mixin form-box {
+  background: $form-background-color;
+  border-bottom: 2px solid $grey-border-color;
+  padding:25px;
+  border-radius: 10px;
+  color: $primary-color;
+
+  h4{
+    font-size: .9rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  p{
+    font-size: .9rem;
+  }
+
+  form{
+    @include form;
   }
 }
