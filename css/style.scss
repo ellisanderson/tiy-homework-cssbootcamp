@@ -301,6 +301,7 @@ header{
   padding: 4rem 0;
 
   .container{
+    overflow: hidden;
 
     .quote{
       @include four;
@@ -330,15 +331,43 @@ header{
     }
 
     .stories{
-      @include six;
+      @include seven;
+      text-align: center;
+      overflow: hidden;
 
-      .profile-one{
-        @include six;
+      img{
+        border-radius: 50%;
+        width: 106px;
+        border: 4px solid $front-end-color;
+
       }
 
-      .profile-two{
+      .profile{
         @include six;
+        padding: 0 10px;
+
+        p{
+          @include profile-paragraph;
+        }
+
+        a{
+          text-decoration: none;
+          color: $secondary-color;
+        }
+
+        a:hover{
+          text-decoration: underline;
+        }
+
+        h3{
+          font-style: italic;
+          font-weight: 100;
+          color:$h-color;
+          font-size: 1.3rem;
+          margin-top: 10px;
+        }
       }
+
 
     }
   }

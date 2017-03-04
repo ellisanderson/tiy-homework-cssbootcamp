@@ -221,34 +221,59 @@ header {
 
 .students {
   padding: 4rem 0; }
-  .students .container .quote {
-    width: 33.333%;
-    box-sizing: border-box;
-    color: #727D84; }
-    .students .container .quote h3 {
-      font-size: 1.4rem;
-      text-transform: uppercase;
-      margin-bottom: 40px; }
-    .students .container .quote h2 {
-      font-size: 1.8rem;
-      font-style: italic;
-      line-height: 2.5rem;
-      margin-bottom: 30px; }
-    .students .container .quote .button {
-      display: flex;
-      align-items: center;
-      width: 180px;
-      font-size: 1.1rem;
-      margin-top: 20px;
-      border-bottom: 2px solid #4FA8A3; }
-  .students .container .stories {
-    width: 50%;
-    box-sizing: border-box; }
-    .students .container .stories .profile-one {
-      width: 50%;
-      box-sizing: border-box; }
-    .students .container .stories .profile-two {
-      width: 50%;
-      box-sizing: border-box; }
+  .students .container {
+    overflow: hidden; }
+    .students .container .quote {
+      width: 33.333%;
+      box-sizing: border-box;
+      color: #727D84; }
+      .students .container .quote h3 {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        margin-bottom: 40px; }
+      .students .container .quote h2 {
+        font-size: 1.8rem;
+        font-style: italic;
+        line-height: 2.5rem;
+        margin-bottom: 30px; }
+      .students .container .quote .button {
+        display: flex;
+        align-items: center;
+        width: 180px;
+        font-size: 1.1rem;
+        margin-top: 20px;
+        border-bottom: 2px solid #4FA8A3; }
+    .students .container .stories {
+      width: 58.333%;
+      box-sizing: border-box;
+      text-align: center;
+      overflow: hidden; }
+      .students .container .stories img {
+        border-radius: 50%;
+        width: 106px;
+        border: 4px solid #ce832d; }
+      .students .container .stories .profile {
+        width: 50%;
+        box-sizing: border-box;
+        padding: 0 10px; }
+        .students .container .stories .profile p {
+          text-align: left;
+          font-style: italic;
+          font-size: 1.15rem;
+          min-height: 125px;
+          line-height: 1.5rem;
+          margin: 15px 0;
+          color: #727D84; }
+        .students .container .stories .profile a {
+          text-decoration: none;
+          color: #6FBBB7; }
+        .students .container .stories .profile a:hover {
+          text-decoration: underline; }
+        .students .container .stories .profile h3 {
+          font-style: italic;
+          font-weight: 100;
+          color: #727D84;
+          font-size: 1.3rem;
+          margin-top: 10px; }
 
 /*# sourceMappingURL=style.css.map */

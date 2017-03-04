@@ -29,6 +29,16 @@
   padding:0 20px;
 }
 
+@mixin profile-paragraph {
+  text-align: left;
+  font-style: italic;
+  font-size: 1.15rem;
+  min-height: 125px;
+  line-height: 1.5rem;
+  margin: 15px 0;
+  color: $h-color;
+}
+
 // ••••••••••••••••GRID DIVISIONS••••••••••••••••••
 
 @mixin twelve {
@@ -47,6 +57,13 @@
 
 @mixin eight {
   width:66.666%;
+  // display: inline-block;
+  // padding:0 25px;
+  box-sizing: border-box;
+}
+
+@mixin seven {
+  width:58.333%;
   // display: inline-block;
   // padding:0 25px;
   box-sizing: border-box;
