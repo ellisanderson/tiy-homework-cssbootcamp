@@ -48,10 +48,14 @@ p{
   padding-right: 40px;
 }
 
+.clearfix{
+  overflow: hidden;
+}
+
 // ••••••••••••••••••••HEADER•••••••••••••••••••••
 header{
   background-color: $primary-color;
-  padding: 20px 0;
+  padding: 7px 0;
 
   .container{
 
@@ -61,7 +65,7 @@ header{
       align-items: center;
 
       img{
-        height:65px;
+        height:43px;
         margin-right: 20px;
         transition: all .2s ease-in-out;
       }
@@ -72,13 +76,14 @@ header{
 
       li{
         @include horizontal-menu;
+        display: none;
 
         a{
           color: white;
           text-decoration: none;
           padding-bottom: 5px;
           transition: color .2s ease-in-out;
-          font-size: 1.05rem;
+          font-size: .8rem;
         }
 
         a:hover{
@@ -90,9 +95,9 @@ header{
 
     .second-nav{
       float: right;
-      margin-top: 15px;
-      display: flex;
+      display: none;
       align-items: center;
+      margin-top: 14px;
 
       li{
         @include horizontal-menu;
@@ -110,6 +115,15 @@ header{
 
 
     }
+
+    .hamburger-menu{
+      margin-top: 15px;
+
+      a{
+        text-decoration: none;
+        color: white;
+      }
+    }
   }
 
   .container::after{
@@ -126,20 +140,21 @@ header{
   background-image: url(../images/hero/hero.jpg);
   background-size:cover;
   background-position: center;
-  min-height:600px;
+  // min-height:300px;
 
     .container{
-      padding-top: 156px;
+      padding: 3rem 20px 4.5rem;
 
         h1{
           color: white;
-          font-size: 4rem;
-          margin-top: 50px;
+          font-size: 2rem;
+
         }
 
         h2{
           margin-top: 10px;
           color:white;
+          font-size: 1rem;
         }
 
         .button{
@@ -159,10 +174,11 @@ header{
 
 .press{
   background-color: $form-background-color;
+  display: none;
+  border-bottom: 1px solid $grey-border-color;
 
   .container{
     text-align: center;
-    border-bottom: 1px solid $grey-border-color;
       img{
         width:13%;
       }
@@ -180,9 +196,9 @@ header{
   .container{
     overflow: hidden;
 
-      .eight{
-        @include eight;
-        padding-right: 40px;
+      .talking-points{
+        // @include eight;
+        // padding-right: 40px;
 
         h3{
           color: $primary-color;
@@ -190,7 +206,7 @@ header{
           font-size: 1.5rem;
           font-style: italic;
           color: $h-color;
-          margin-bottom: 20px;
+          margin: 20px 0;
         }
 
         p{
@@ -199,7 +215,7 @@ header{
       }
 
       .form{
-        @include four;
+        // @include four;
         @include form-box;
       }
   }
@@ -218,7 +234,6 @@ header{
   .container{
 
     .discover-details{
-      @include eight;
       margin: auto;
       text-align: center;
 
@@ -235,15 +250,15 @@ header{
     }
 
     .course-row{
-      @include ten;
+      // @include ten;
       overflow: hidden;
       margin:auto;
 
+
       .course{
-        @include three;
+        // @include three;
         margin-top: 50px;
         text-align: center;
-        padding: 0 30px;
 
         a{
 
@@ -290,14 +305,15 @@ header{
 
 // ••••••••••••••••••••STUDENTS•••••••••••••••••••••
 .students{
-  padding: 4rem 0;
+  padding: 4rem 0 0;
 
   .container{
     overflow: hidden;
 
     .quote{
-      @include four;
+      // @include four;
       color: $h-color;
+      margin-bottom: 6rem;
 
       h3{
         font-size: 1.5rem;
@@ -323,7 +339,7 @@ header{
     }
 
     .stories{
-      @include seven;
+      // @include seven;
       text-align: center;
       overflow: hidden;
 
@@ -335,8 +351,9 @@ header{
       }
 
       .profile{
-        @include six;
+        // @include six;
         padding: 0 15px;
+        margin-bottom: 3rem;
 
         p{
           @include profile-paragraph;
@@ -378,7 +395,7 @@ header{
     text-align: center;
 
     .employers-details{
-      @include eight;
+      // @include eight;
       text-align: center;
       color: white;
       margin: auto;
@@ -392,19 +409,20 @@ header{
     }
 
     .employer-logo{
-      width: 33%;
+      width: 100%;
       display: inline-block;
       text-align: center;
 
       img{
         width:50%;
+        max-width: 230px;
       }
     }
 
     .button{
       margin-top: 4rem;
       font-size: 1.1rem;
-      width: 400px;
+      line-height: 1.5rem;
       border-bottom: 2px solid $button-hover-color;
     }
   }
@@ -419,9 +437,10 @@ header{
     overflow: hidden;
 
     .talk{
-      @include six;
-      padding-right: 40px;
+      // @include six;
+      // padding-right: 40px;
       color: $h-color;
+      margin-bottom: 20px;
 
       h3{
         font-size: 1.5rem;
@@ -440,11 +459,8 @@ header{
       }
     }
 
-    .form{
-      width: 24%;
-      box-sizing: border-box;
+    .form1, .form2{
       @include form-box;
-      margin-bottom: 20px;
 
       p{
         min-height: 80px;
@@ -479,13 +495,258 @@ header{
 
 
 // ••••••••••••••••••••MEDIA QUERIES•••••••••••••••••••••
-@media (max-width:1200px) {}
 
+@media (min-width:600px) {
 
-@media (max-width:1025px) {}
+  .hero{
+    line-height: 2.5rem;
 
+    .container{
+      min-height: 450px;
 
-@media (max-width:991px) {}
+      h1{
+        margin-top: 6rem;
+      }
+    }
+  }
 
+  .press{
+    display: block;
 
-@media (max-width:767px) {}
+    img{
+      // padding: 20px 0;
+    }
+  }
+}
+
+@media (min-width:767px) {
+
+  .container{
+    max-width: 800px;
+  }
+
+  header{
+    padding:20px 0;
+
+    .container{
+
+      .first-nav{
+        img{
+          height: 65px;
+        }
+
+        li{
+          display: inline-block;
+        }
+      }
+
+      .second-nav{
+        display: flex;
+      }
+
+      .hamburger-menu{
+        display: none;
+      }
+    }
+  }
+
+  .info{
+    .form{
+      @include six;
+    }
+  }
+
+  .discover{
+    .container{
+      padding: 1rem 20px;
+      .course-row{
+        .course{
+          @include three;
+          float: left;
+        }
+      }
+    }
+  }
+
+  .students{
+    .container{
+      .stories{
+        .profile{
+          @include six;
+          float: left;
+
+          p{
+            min-height: 100px;
+          }
+        }
+      }
+    }
+  }
+
+  .employers{
+    .container{
+      padding: 1rem 20px 0;
+
+      .employer-logo{
+        width: 32%;
+      }
+
+      a{
+        width:450px;
+      }
+    }
+  }
+
+  .questions{
+    .container{
+      .form1{
+        width:48%;
+        float: left;
+      }
+
+      .form2{
+        width:48%;
+        float: right;
+      }
+    }
+  }
+
+}
+
+@media (min-width:990px) {
+
+  .container{
+    max-width: 970px;
+  }
+
+  header{
+    .container{
+      .first-nav{
+        li{
+          a{
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+  }
+
+  .discover{
+    .container{
+      width:750px;
+    }
+  }
+
+  .students{
+    .container{
+
+      .quote{
+        @include four;
+        float: left;
+        margin-right: 20px;
+      }
+
+      .stories{
+        @include seven;
+
+        .profile{
+
+          p{
+            min-height: 180px;
+          }
+        }
+      }
+    }
+  }
+
+  .employers{
+    .container{
+      .employers-details{
+        width: 750px;
+      }
+    }
+  }
+
+  .questions{
+    .container{
+      .talk{
+        @include four;
+        float: left;
+        padding-right: 40px;
+      }
+
+      .form1, .form2{
+        width: 31%;
+      }
+    }
+  }
+}
+
+@media (min-width:1025px) {
+  .hero{
+    .container{
+      min-height: 600px;
+
+      h1{
+        font-size: 3.5rem;
+        line-height: 4rem;
+        margin-top: 9rem;
+      }
+
+      h2{
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+@media (min-width:1200px) {
+  .container{
+    max-width: 1170px;
+  }
+
+  .info{
+    .container{
+      .talking-points{
+        @include eight;
+        float: left;
+        padding-right:40px;
+      }
+
+      .form{
+        @include four;
+        float: right;
+      }
+    }
+  }
+
+  .discover{
+    .container{
+    }
+  }
+
+  .students{
+    .container{
+      @include ten;
+      .quote{
+
+      }
+
+      .stories{
+        float: right;
+      }
+    }
+  }
+
+  .questions{
+    .container{
+      .talk{
+        @include six;
+      }
+
+      .form1, .form2{
+        width: 24%;
+      }
+    }
+  }
+}
